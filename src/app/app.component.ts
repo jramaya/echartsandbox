@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MockServerService } from './mock-server.service';
 import * as echarts from 'echarts';
-import * as ecStatfrom 'echarts-stat';
+import {transform} from 'echarts-stat-fix';
 
-echarts.registerTransform(ecStat.);
+echarts.registerTransform(transform.clustering);
 
 @Component({
   selector: 'app-root',
