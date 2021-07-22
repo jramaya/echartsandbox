@@ -23,7 +23,6 @@
     "@angular/router": "~10.2.2",
     "@juggle/resize-observer": "^3.3.1",
     "echarts": "^5.0.2",
-    "echarts-stat-fix": "^1.1.2",
     "echarts-stat": "^1.1.2",
     "ngx-echarts": "6.0.1",
     "rxjs": "~6.5.4",
