@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MockServerService } from './mock-server.service';
 import * as echarts from 'echarts';
-import {transform} from 'echarts-stat-fix';
+import {transform} from 'echarts-stat';
 
 echarts.registerTransform(transform.clustering);
 
