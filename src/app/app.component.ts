@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MockServerService } from './mock-server.service';
-import * as echarts from 'echarts';
+import * as _echarts from 'echarts/dist/echarts';
 import * as ecStat from 'echarts-stat/dist/ecStat.min.js';
 
-echarts.registerTransform(ecStat.transform.clustering);
+_echarts.registerTransform(ecStat.transform.clustering);
 
 @Component({
   selector: 'app-root',
@@ -13,8 +13,15 @@ echarts.registerTransform(ecStat.transform.clustering);
 })
 export class AppComponent {
   options;
+  echartsInstance: any;
+
   constructor(private api: MockServerService, private http: HttpClient) {
     this.options = this.setOptions();
+  }
+
+  initChart(echartsInstance ) {
+  this.echartsInstance = echartsInstance
+  // this.echartsInstance.registerTransform(ecStat.transform.clustering);
   }
 
   setOptionsBasics() {
