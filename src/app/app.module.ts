@@ -29,7 +29,9 @@ import * as echarts from 'echarts';
   ],
   imports: [
     BrowserModule,
-    NgxEchartsModule.forRoot({ echarts }),
+    NgxEchartsModule.forRoot({ 
+      echarts: () => import('echarts/dist/echarts')
+     }),
     HttpClientModule
   ],
   providers: [],

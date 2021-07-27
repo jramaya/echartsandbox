@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MockServerService } from './mock-server.service';
-import * as _echarts from 'echarts/dist/echarts';
+import * as echarts from 'echarts/dist/echarts';
 import * as ecStat from 'echarts-stat/dist/ecStat.js';
 
-// _echarts.registerTransform(ecStat.transform.clustering);
 
 @Component({
   selector: 'app-root',
@@ -25,10 +24,10 @@ export class AppComponent {
   console.log(this.echartsInstance.setOption);
   // this.echartsInstance.setOption(this.setOptionsBasics());
   console.log('######## registerTransform ##############');
-  console.log(_echarts.registerTransform);
+  console.log(echarts.registerTransform);
   console.log('######## clustering ##############');
   console.log(ecStat.transform.clustering);
-  _echarts.registerTransform(ecStat.transform.clustering);
+  echarts.registerTransform(ecStat.transform.clustering);
   }
 
   setOptionsBasics() {
